@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap");
+html {
+  height: 100%;
+}
+body {
+  font-family: "Varela Round";
+
+  background-color: #ffa500;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+body>div{
+  margin: auto;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+main {
+  min-height: 76vh;
+  max-height: max-content;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  justify-content: center;
+  /* width: auto; */
+}
+.header-text {
+  font-family: "Lobster";
+  color: white;
+}
+.layout-box {
+  width: 700px;
+}
+.flexify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input::placeholder {
+  margin: 5px;
+}
+footer {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  margin: 5px;
+  padding: 5px;
+  color: #6f4b4b;
+}
+footer p a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer p a:hover {
+  font-weight: 600;
+}
+.completed-tasks > div {
+  filter: grayscale(70%) opacity(75%);
+}
+.button-holder{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marge{
+  margin-bottom: 15px;
+}
+a{
+  text-decoration: none;
+}

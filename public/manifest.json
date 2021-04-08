@@ -1,0 +1,16 @@
+{
+    "short_name": "ToDo List",
+    "name": "Online ToDo List",
+    "author":"Nabhodipta Garai",
+    "developer":"Nabhodipta Garai a.k.a. brownboycodes",
+    "icons": [
+        {
+            "src": "/to-do-list.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/index.html",
+    "manifest_version": 2,
+    "version": "0.2"
+}
