@@ -18,7 +18,7 @@ const MainPage = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const savedTodos = localStorage.getItem("todos");
-  console.log(savedTodos);
+  
   if (savedTodos !== null) {
     dispatch(setTodos(JSON.parse(savedTodos)));
   }

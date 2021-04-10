@@ -76,7 +76,7 @@ const AddTodo = () => {
           type="text"
           {...formik.getFieldProps("todoItem")}
           placeholder="Add a ToDo task"
-          autocomplete="off"
+          autoComplete='off'
           className={classes.textField}
         />
         {/* <Container> */}

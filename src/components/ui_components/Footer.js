@@ -25,6 +25,8 @@ const Footer = () => {
         |{" "}
         <Link
           href="https://github.com/brownboycodes/ToDo_List"
+          target="_blank"
+          rel="noreferrer"
           className={classes.materialLinks}
         >
           Github
@@ -33,7 +35,11 @@ const Footer = () => {
       </p>
       <p>
         Created by{" "}
-        <a href="https://brownboycodes.herokuapp.com/">
+        <a
+          href="https://brownboycodes.herokuapp.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Nabhodipta Garai | brownboycodes
         </a>
       </p>
