@@ -7,8 +7,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
-import DeleteIcon from "@material-ui/icons/Delete";
-import { useState } from "react";
+
+import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
 import { useDispatch } from "react-redux";
 import { updateStatus, deleteTodo } from "../../state_manager/allTodosSlice";
 
@@ -32,29 +32,25 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    color:'#343A40',
-    fontFamily:'Varela Round',
-    
+    color: "#343A40",
+    fontFamily: "Varela Round",
   },
   card: {
     margin: "10px",
   },
-  typographyClass:{
-    color:'#495057',
-    fontFamily:'Varela Round',
-    width:'100%'
+  typographyClass: {
+    color: "#495057",
+    fontFamily: "Varela Round",
+    width: "100%",
     // fontSize:'3px'
-  }
+  },
 }));
 
 const TodoItems = ({ todos }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const [checkboxState, setCheckboxState] = useState({
-    checked: todos.completed,
-  });
+  const checkboxState = todos.completed;
   const handleChange = (event) => {
-    
     dispatch(
       updateStatus({
         id: todos.id,
@@ -62,11 +58,6 @@ const TodoItems = ({ todos }) => {
         completed: !todos.completed,
       })
     );
-    // setCheckboxState({
-    //   ...checkboxState,
-    //   [event.target.name]: event.target.checked,
-    // });
-    // console.log(todos.id);
   };
   const deleteItem = () => {
     dispatch(deleteTodo(todos.id));
@@ -77,13 +68,15 @@ const TodoItems = ({ todos }) => {
         <FormControlLabel
           control={
             <GreenCheckbox
-              checked={checkboxState.checked}
+              checked={checkboxState}
               onChange={handleChange}
               name="checked"
             />
           }
         />
-        <Typography className={classes.typographyClass}>{todos.todo}</Typography>
+        <Typography className={classes.typographyClass}>
+          {todos.todo}
+        </Typography>
         <Button
           variant="contained"
           color="secondary"
@@ -91,7 +84,7 @@ const TodoItems = ({ todos }) => {
           size="small"
           onClick={deleteItem}
         >
-          <DeleteIcon />
+          <ClearRoundedIcon />
         </Button>
       </CardContent>
     </Card>

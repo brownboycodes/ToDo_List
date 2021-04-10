@@ -1,8 +1,7 @@
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 
 import SaveIcon from "@material-ui/icons/Save";
-import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
+import DeleteIcon from "@material-ui/icons/Delete";
 import { makeStyles, withStyles } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { green } from "@material-ui/core/colors";
@@ -56,7 +55,7 @@ const WhatToDos = () => {
       <Button
         color="secondary"
         variant="contained"
-        endIcon={<ClearRoundedIcon />}
+        endIcon={<DeleteIcon />}
         onClick={resetTodos}
       >
         Reset
