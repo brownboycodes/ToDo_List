@@ -27,4 +27,4 @@ instead users are provided with the options of saving their lists to localStorag
 
 npm start
 
-> created by Nabhodipta Garai | brownboycodes
+> created by [Nabhodipta Garai | brownboycodes](https://brownboycodes.herokuapp.com/)
